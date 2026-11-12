@@ -18,6 +18,8 @@ try{
  if(!ready)throw new Error('Render server did not become ready. '+errors);
  await mkdir('out',{recursive:true});
  await cp('dist/client','out',{recursive:true});
+ await cp('LICENSE','out/LICENSE.txt');
+ await cp('THIRD_PARTY_NOTICES.md','out/THIRD_PARTY_NOTICES.txt');
  for(const route of ['/','/terminos','/privacidad','/derechos']){
   const response=await fetch(origin+route);
   if(!response.ok)throw new Error(`Cannot render ${route}: ${response.status}`);
