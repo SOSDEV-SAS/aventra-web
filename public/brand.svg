@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title description">
+  <title id="title">Aventra</title>
+  <desc id="description">A direccional y manubrio de motocicleta construidos como una sola silueta monocromática.</desc>
+  <path
+    d="M50 216L128 34L206 216"
+    fill="none"
+    stroke="#236B59"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="38"
+  />
+  <rect x="43" y="137" width="48" height="20" rx="7" fill="#236B59" />
+  <path
+    d="M87 147C102 147 108 158 121 162C126 164 130 164 135 162C148 158 154 147 169 147"
+    fill="none"
+    stroke="#236B59"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="15"
+  />
+  <rect x="165" y="137" width="48" height="20" rx="7" fill="#236B59" />
+</svg>

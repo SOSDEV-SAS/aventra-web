@@ -1,0 +1,252 @@
+/* Editorial rhythm: readable text, compact spacing, no additional content. */
+.aventra-experience{
+ --body-size:17px;
+ --body-leading:1.75;
+}
+.section-space,.download-section{padding:76px max(6%,calc((100vw - 1320px)/2))}
+.section-top{margin-bottom:38px}
+.split-intro,.philosophy-opening{grid-template-columns:1.15fr 1fr;gap:7%;align-items:center;margin-bottom:36px}
+.intro-paragraph,.section-lead,.philosophy-opening .section-lead{font-size:var(--body-size);line-height:var(--body-leading);max-width:490px}
+.intro-paragraph{justify-self:stretch}
+.section-lead{margin-top:24px}
+.editorial-heading{font-size:clamp(42px,4.7vw,72px);line-height:1.08;letter-spacing:-.055em}
+.section-aside{font-size:11px;line-height:1.6;letter-spacing:.09em;max-width:300px}
+.chapter-label{font-size:13px;letter-spacing:.12em}
+.chapter-label>span{font-size:12px}
+.inline-link,.button-secondary,.nav-cta{font-size:14px;min-height:44px}
+.desktop-nav a{font-size:13px}
+.desktop-nav{gap:22px}
+.header-actions{gap:15px}
+.hero-bottom-copy>p{font-size:15px;line-height:1.7;max-width:300px}
+.hero-discover{font-size:14px}
+.hero-copy>.eyebrow{font-size:12px}
+.hero-copy h1{font-size:clamp(56px,6.8vw,112px)}
+.hero-copy{bottom:27%}
+.scene-caption{font-size:clamp(23px,2.4vw,38px);line-height:1.35}
+.scene-count{font-size:12px}
+.immersive-intro{--handoff-distance:75svh}
+.journey-handoff{padding-inline:max(6%,calc((100vw - 1320px)/2))}
+.journey-handoff .rodadas-opening{max-width:1320px}
+.journey-handoff .editorial-heading{font-size:clamp(46px,5.6vw,86px);line-height:1.05}
+.journey-handoff .intro-paragraph{font-size:18px;line-height:1.75;max-width:490px}
+.journey-handoff .split-intro{gap:7%;margin-bottom:28px}
+.journey-handoff .section-top{margin-bottom:38px}
+.handoff-continue{font-size:14px}
+.rodadas-section{padding-top:0}
+.wide-illustration,.journey-illustration{margin-inline:0;border-radius:10px}
+.wide-illustration>img,.journey-illustration>img{aspect-ratio:2;object-fit:cover}
+.wide-illustration figcaption{font-size:12px;padding:50px 24px 22px;letter-spacing:.07em}
+.wide-illustration figcaption>span:last-child{font-size:13px}
+.ride-steps{gap:24px;margin-top:28px}
+.ride-steps article{padding:26px;border:1px solid var(--line);background:var(--mist);border-radius:10px}
+.step-icon{margin-bottom:17px;background:var(--paper)}
+.ride-steps h3{font-size:26px;line-height:1.2;margin-block:12px}
+.ride-steps p,.privacy-note p{font-size:16px;line-height:1.75}
+.ride-steps small{font-size:11px;letter-spacing:.08em}
+.privacy-note{margin-top:24px;padding-top:20px}
+.privacy-note p{max-width:1000px}
+.privacy-note>svg,.care-features article>svg{flex-shrink:0}
+.moto-section{padding-bottom:76px}
+.small-signature{font-size:14px}
+.stack-card-inner{min-height:420px;border-radius:12px}
+.stack-copy{padding:36px 8%}
+.stack-copy h3{font-size:clamp(32px,3.2vw,47px);margin-block:22px 18px;max-width:430px}
+.stack-copy>p{font-size:17px;line-height:1.75;max-width:440px;margin-bottom:22px}
+.stack-copy li{font-size:14px;line-height:1.6;margin-top:8px}
+.stack-copy small{font-size:13px;line-height:1.7;max-width:420px}
+.card-index,.knowledge-card .card-index{font-size:11px;letter-spacing:.09em}
+.stack-art{min-height:420px}
+.stack-art>span{font-size:12px;line-height:1.6;text-align:center;padding-inline:20px}
+.stack-art>.art-small{font-size:11px;padding:0}
+.care-grid{grid-template-columns:1.1fr 1fr;gap:7%}
+.care-copy .editorial-heading{font-size:clamp(40px,4.3vw,65px)}
+.care-features article{gap:18px;padding:0 0 22px;margin-bottom:22px}
+.care-features h3{font-size:21px;line-height:1.3;margin-bottom:9px}
+.care-features p{font-size:16px;line-height:1.75;max-width:490px}
+.care-statement{font-size:clamp(40px,5vw,76px);margin-top:42px;padding-top:32px}
+.care-statement>span{font-size:11px;max-width:250px;line-height:1.7}
+.knowledge-grid{gap:18px;border:0}
+.knowledge-card,.knowledge-card:not(:first-child){padding:26px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.knowledge-card>svg{margin-bottom:20px}
+.knowledge-card h3{font-size:clamp(25px,2.3vw,34px);max-width:340px;margin-block:16px;line-height:1.15}
+.knowledge-card p{font-size:16px;line-height:1.75;margin-bottom:18px}
+.knowledge-card small{font-size:14px;line-height:1.7;margin-bottom:20px}
+.knowledge-foot{font-size:11px;line-height:1.6;letter-spacing:.04em}
+.support-strip{margin-top:28px}
+.support-strip>span{font-size:11px;letter-spacing:.07em}
+.support-strip>p{font-size:16px;line-height:1.75}
+.philosophy-section{padding-bottom:66px}
+.philosophy-opening .section-lead{margin-top:0}
+.journey-note{font-size:19px;line-height:1.55;max-width:600px}
+.journey-illustration:after{content:'';position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#10281e80);pointer-events:none}
+.journey-note{z-index:1}
+.journey-steps{margin-top:32px;gap:5%}
+.route-node{margin-bottom:18px}
+.journey-steps small{font-size:12px}
+.journey-steps h3{font-size:27px;line-height:1.2}
+.journey-steps p{font-size:16px;line-height:1.75}
+.principles-band{margin-top:36px;padding-top:28px;font-size:clamp(24px,3vw,42px)}
+.download-section{gap:7%;align-items:center;scroll-margin-top:88px}
+.download-copy>.eyebrow,.download-card .eyebrow{font-size:12px;line-height:1.6}
+.download-copy>.eyebrow{margin-bottom:24px}
+.download-copy h2{font-size:clamp(42px,4.4vw,66px)}
+.download-copy>p{font-size:17px;line-height:1.75;max-width:470px}
+.download-card{padding:30px;border-radius:12px}
+.download-card h3{font-size:32px}
+.download-status,.download-card>.button-secondary,.button-primary{font-size:15px;line-height:1.6}
+.release-details>div{font-size:14px}
+.site-footer{padding:42px max(6%,calc((100vw - 1320px)/2)) 30px;grid-template-columns:.8fr 1.3fr .9fr;gap:26px}
+.site-footer>p{font-size:15px;line-height:1.75;max-width:440px}
+.footer-outro>span{font-size:14px;line-height:1.75;margin-top:8px}
+.site-footer>div{font-size:14px}
+.site-footer>small,.site-footer>small:last-child{font-size:12px;line-height:1.7}
+@media(max-width:1150px){
+ .desktop-nav{gap:13px}
+ .desktop-nav a{font-size:12px}
+ .nav-cta{font-size:12px;padding-inline:12px}
+ .header-actions{gap:10px}
+ .stack-copy{padding:30px}
+ .care-statement>span{position:static;display:block;margin-top:18px;max-width:none}
+ .knowledge-card,.knowledge-card:not(:first-child){padding:22px}
+}
+@media(max-width:767px){
+ .aventra-experience{--body-size:16px}
+ .section-space,.download-section{padding:54px 24px}
+ .section-top{margin-bottom:27px;gap:16px}
+ .section-aside{font-size:10px;max-width:135px}
+ .chapter-label{font-size:11px;letter-spacing:.09em;gap:9px}
+ .chapter-label>span{font-size:11px}
+ .split-intro,.philosophy-opening{display:block;margin-bottom:28px}
+ .editorial-heading,.care-copy .editorial-heading{font-size:clamp(36px,10vw,54px);line-height:1.1}
+ .intro-paragraph,.section-lead{font-size:16px;line-height:1.75;max-width:none;margin-top:20px}
+ .philosophy-opening .section-lead{margin-top:20px}
+ .inline-link,.button-secondary{font-size:14px}
+ .nav-cta{font-size:11px;min-height:40px;padding:8px 11px}
+ .site-header{padding-inline:20px;height:74px}
+ .wordmark span{font-size:23px}
+ .header-icon{min-width:30px;min-height:40px}
+ .hero-copy h1{font-size:clamp(49px,12.4vw,82px)}
+ .hero-copy>.eyebrow{font-size:10px;line-height:1.7}
+ .hero-copy{bottom:25%}
+ .hero-bottom-copy>p{font-size:14px;max-width:260px}
+ .hero-discover{font-size:13px}
+ .scene-caption{font-size:24px;line-height:1.4}
+ .immersive-intro{--handoff-distance:45svh}
+ .journey-handoff{padding:92px 24px 38px}
+ .journey-handoff .editorial-heading{font-size:clamp(40px,11vw,62px)}
+ .journey-handoff .intro-paragraph{font-size:16px;line-height:1.75;max-width:none;margin-top:22px}
+ .journey-handoff .section-top{margin-bottom:26px}
+ .journey-handoff .split-intro{margin-bottom:18px}
+ .handoff-continue{font-size:13px;line-height:1.6}
+ .rodadas-section{padding-top:0}
+ .wide-illustration>img,.journey-illustration>img{aspect-ratio:auto;height:auto;object-fit:contain}
+ .wide-illustration figcaption{padding:40px 16px 15px;font-size:10px;gap:10px;line-height:1.6}
+ .wide-illustration figcaption>span:last-child{font-size:11px}
+ .ride-steps{grid-template-columns:1fr;gap:14px;margin-top:20px}
+ .ride-steps article{padding:23px}
+ .ride-steps h3{font-size:25px}
+ .ride-steps p,.privacy-note p{font-size:15px;line-height:1.75}
+ .ride-steps small{font-size:11px}
+ .step-icon{margin-bottom:14px}
+ .privacy-note{gap:10px;margin-top:22px}
+ .small-signature{font-size:14px;margin-top:18px}
+ .stack-card-inner{grid-template-columns:1fr;min-height:0}
+ .stack-copy{padding:26px}
+ .stack-copy h3{font-size:34px;max-width:none;margin-block:20px 16px}
+ .stack-copy>p{font-size:16px;max-width:none;line-height:1.75}
+ .stack-copy li{font-size:14px}
+ .stack-copy small{font-size:13px;max-width:none}
+ .card-index,.knowledge-card .card-index{font-size:11px}
+ .stack-art{min-height:270px}
+ .stack-art>img{object-position:center}
+ .stack-art>span{font-size:12px}
+ .stack-art>.art-small{font-size:10px}
+ .care-grid{display:block}
+ .care-features{margin-top:30px}
+ .care-features h3{font-size:20px}
+ .care-features p{font-size:15px;max-width:none}
+ .care-statement{font-size:clamp(37px,10vw,54px);margin-top:32px;padding-top:28px;line-height:1.12}
+ .care-statement>span{font-size:11px;line-height:1.7;margin-top:18px}
+ .knowledge-grid{display:grid;grid-template-columns:1fr;gap:14px}
+ .knowledge-card,.knowledge-card:not(:first-child){display:flex;padding:24px}
+ .knowledge-card>svg{width:28px;height:28px;margin-bottom:18px}
+ .knowledge-card h3{font-size:28px;max-width:none;margin-block:14px}
+ .knowledge-card p{font-size:16px;line-height:1.75}
+ .knowledge-card small{font-size:14px;line-height:1.7}
+ .knowledge-foot{font-size:11px;margin-top:10px}
+ .support-strip{gap:16px;margin-top:24px}
+ .support-strip>span{font-size:11px}
+ .support-strip>p{font-size:15px;line-height:1.75}
+ .journey-note{font-size:16px;left:20px;bottom:20px;right:20px}
+ .journey-steps{margin-top:26px;padding-left:28px}
+ .journey-steps small{font-size:12px}
+ .journey-steps h3{font-size:25px}
+ .journey-steps p{font-size:15px;line-height:1.75}
+ .principles-band{margin-top:28px;padding-top:24px;font-size:27px;gap:14px;flex-wrap:wrap;justify-content:flex-start}
+ .download-section{display:grid;grid-template-columns:1fr;gap:28px;scroll-margin-top:74px}
+ .download-copy h2{font-size:43px;line-height:1.1}
+ .download-copy>p{font-size:16px;max-width:none}
+ .download-copy>.eyebrow,.download-card .eyebrow{font-size:11px}
+ .download-card{padding:26px}
+ .download-card h3{font-size:30px}
+ .download-status,.download-card>.button-secondary,.button-primary{font-size:14px}
+ .site-footer{padding:36px 24px 26px;grid-template-columns:1fr;gap:24px}
+ .site-footer>p{font-size:15px;justify-self:start;margin:0;max-width:none}
+ .site-footer>div{font-size:14px;align-items:flex-start;gap:10px}
+ .site-footer>small,.site-footer>small:last-child{font-size:12px;grid-column:1;justify-self:start;margin:0}
+ .footer-outro>span{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-copy{bottom:auto}
+ .journey-handoff{padding-block:64px 44px}
+}
+
+@media(max-width:900px){
+ .mobile-nav a{font-size:16px;min-height:48px;line-height:1.5}
+ .mobile-nav a>span{font-size:12px}
+ .mobile-nav>button{font-size:15px;min-height:44px}
+}
+@media(max-width:380px){
+ .header-actions .nav-cta{display:none}
+ .journey-handoff .editorial-heading{font-size:38px}
+ .journey-handoff .intro-paragraph{font-size:15px;line-height:1.65}
+ .journey-handoff{padding-top:86px;padding-bottom:28px}
+ .journey-handoff .section-top{margin-bottom:20px}
+ .handoff-continue{font-size:12px}
+}
+
+@media(max-width:767px){
+ .journey-illustration>img{aspect-ratio:4/3;object-fit:cover;object-position:42% center}
+ .journey-illustration:after{display:none}
+ .journey-note{position:static;padding:16px 18px;background:var(--mist);color:var(--deep);font-size:15px;line-height:1.65;text-shadow:none}
+ .wide-illustration figcaption{position:static;background:var(--mist);color:var(--deep);padding:14px 16px;flex-wrap:wrap;font-size:11px;letter-spacing:.04em}
+ .wide-illustration figcaption>span:last-child{font-size:12px}
+}
+
+/* The journey invitation is anchored to the video viewport, independently of text. */
+.hero-discover{
+ position:absolute;
+ left:50%;
+ bottom:calc(6.8% + 70px);
+ transform:translateX(-50%);
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ gap:10px;
+ width:max-content;
+ max-width:calc(100% - 48px);
+ text-align:center;
+ white-space:normal;
+ z-index:2;
+ opacity:calc(1 - var(--handoff-fade));
+}
+.hero-discover>span{margin:0;flex-shrink:0}
+.hero-stage.is-handing-off .hero-discover{pointer-events:none}
+@media(max-width:767px){
+ .hero-discover{bottom:calc(5% + 68px);font-size:13px;gap:9px}
+ .hero-discover>span{width:40px;height:40px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-discover{top:calc(100svh - 180px);bottom:auto;opacity:1}
+}

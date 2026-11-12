@@ -1,0 +1,147 @@
+/* Motorcycle portrait and its history share the same immersive stage. */
+.motorcycle-story{
+ --moto-progress:0;
+ position:relative;
+ isolation:isolate;
+ background:#10261f;
+ color:#f7f6f1;
+ scroll-margin-top:-95px;
+}
+.moto-story-stage{position:relative;overflow:hidden;background:#10261f}
+.moto-story-backdrop{position:relative;aspect-ratio:16/9;overflow:hidden;background:#10261f}
+.moto-story-picture,.moto-story-picture img{display:block;width:100%;height:100%}
+.moto-story-picture img{object-fit:cover;object-position:70% center}
+.moto-story-history-image{display:none}
+.moto-story-identity-image{position:absolute;inset:0;overflow:hidden;background:#10261f}
+.moto-story-identity-image img{display:block;width:100%;height:100%;object-fit:contain}
+.moto-story-shade{display:none}
+.moto-story-topline{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:58px 7% 0;position:relative;z-index:2}
+.moto-story-topline>p{display:flex;align-items:center;gap:14px;font-size:12px;line-height:1.7;letter-spacing:.13em;margin:0}
+.moto-story-topline>p>span{color:#c3d8ca;font-size:11px}
+.moto-story-topline i{width:26px;height:1px;background:#ffffff55}
+.moto-story-topline>span{color:#e0eadf;font-size:10px;line-height:1.8;letter-spacing:.1em;text-align:right}
+.moto-story-scenes{position:relative}
+.moto-story-scene{position:relative;padding:55px 7%;max-width:900px;scroll-margin-top:100px}
+.moto-story-kicker{display:flex;align-items:center;gap:12px;color:#c5ddce;font-size:12px;line-height:1.6;letter-spacing:.11em;text-transform:uppercase;margin:0 0 24px}
+.moto-story-scene h2,.moto-story-scene h3{font-size:clamp(44px,5.4vw,84px);line-height:1.04;letter-spacing:-.055em;font-weight:500;margin:0;text-wrap:balance}
+.moto-story-text{font-size:18px;line-height:1.75;max-width:470px;margin:24px 0 0;color:#e2eae3}
+.moto-story-tags{list-style:none;display:flex;flex-wrap:wrap;gap:10px 20px;padding:0;margin:26px 0 0;color:#c8d9ce}
+.moto-story-tags li{display:flex;align-items:center;gap:8px;font-size:13px;line-height:1.6}
+.moto-story-tags svg{flex-shrink:0}
+.moto-story-note{margin-top:22px;max-width:450px;font-size:13px;line-height:1.7;color:#d5e3d7}
+.moto-story-note summary{cursor:pointer;min-height:32px;list-style-position:inside;text-decoration:underline;text-underline-offset:4px}
+.moto-story-note p{padding:13px 16px;background:#0b211ae8;border:1px solid #d4e6d433;border-radius:8px;margin:8px 0 0}
+.moto-story-note summary:focus-visible{outline:2px solid #c5b981;outline-offset:5px}
+.moto-story-console{display:none}
+.moto-story-next{display:flex;align-items:center;justify-content:center;gap:14px;padding:25px 24px 40px;font-size:13px;line-height:1.6;color:#d5e3d7}
+.motorcycle-story.is-enhanced{height:260svh}
+.is-enhanced .moto-story-stage{position:sticky;top:0;height:100svh}
+.is-enhanced .moto-story-backdrop{position:absolute;inset:0;aspect-ratio:auto}
+.is-enhanced .moto-story-picture{position:absolute;inset:0;opacity:1;transition:opacity .8s ease}
+.is-enhanced .moto-story-picture img{transform:scale(calc(1.015 + var(--moto-progress)*.04));transform-origin:72% 58%;transition:transform 1.1s ease;will-change:transform}
+.is-enhanced[data-view="care"] .moto-story-picture img{transform:scale(1.16);transform-origin:75% 68%}
+.is-enhanced[data-view="fuel"] .moto-story-picture img{transform:scale(1.1);transform-origin:72% 40%}
+.is-enhanced .moto-story-history-image{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% center;opacity:0;transition:opacity .9s ease}
+.is-enhanced[data-view="history"] .moto-story-history-image{opacity:1}
+.is-enhanced[data-view="history"] .moto-story-picture{opacity:0}
+.is-enhanced .moto-story-identity-image{inset:95px 4% 115px 0;background:transparent;opacity:0;transition:opacity .8s ease;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 95%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+.is-enhanced .moto-story-identity-image img{object-position:right center}
+.is-enhanced[data-view="identity"] .moto-story-identity-image{opacity:1}
+.is-enhanced[data-view="identity"] .moto-story-picture{opacity:0}
+.is-enhanced[data-view="identity"] .moto-story-topline>span{visibility:hidden}
+.is-enhanced .moto-story-shade{display:block;position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#071a13f5 0%,#0b211ad6 26%,#10261f66 50%,transparent 76%),linear-gradient(180deg,#071a1366,transparent 28%,transparent 65%,#071a13e6);z-index:1}
+.is-enhanced .moto-story-topline{position:absolute;top:118px;left:7%;right:7%;padding:0;pointer-events:none}
+.is-enhanced .moto-story-scenes{position:absolute;inset:0;z-index:2;pointer-events:none}
+.is-enhanced .moto-story-scene{position:absolute;left:7%;top:185px;bottom:auto;width:41%;max-width:570px;padding:0;opacity:0;visibility:hidden;transform:translateY(18px);transition:opacity .45s ease,transform .65s ease,visibility .45s;pointer-events:none}
+.is-enhanced .moto-story-scene[data-active="true"]{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.is-enhanced .moto-story-console{position:absolute;left:7%;right:7%;bottom:34px;display:flex;align-items:center;gap:32px;z-index:3;border-top:1px solid #e1ebdb55;padding-top:15px}
+.moto-story-count{display:flex;align-items:center;gap:12px;font-size:12px;color:#d6e1d9;white-space:nowrap}
+.moto-story-count i{width:22px;height:1px;background:#c5d9c666}
+.moto-story-console nav{display:flex;justify-content:center;gap:30px;flex:1;min-width:0}
+.moto-story-console nav button{position:relative;display:flex;align-items:center;gap:9px;min-height:44px;color:#d4ded5b3;font-size:14px;padding:6px 0;line-height:1.5;transition:color .2s}
+.moto-story-console nav button>span{font-size:10px;opacity:.65}
+.moto-story-console nav button[aria-current]{color:#fff}
+.moto-story-console nav button[aria-current]:before{content:'';position:absolute;left:0;right:0;top:-16px;height:2px;background:#c4dfca}
+.moto-story-arrows{display:flex;gap:5px}
+.moto-story-arrows button,.moto-story-arrows a{display:grid;place-items:center;width:42px;height:44px;min-width:42px;color:#e4eee5}
+.is-enhanced .moto-story-next{position:absolute;left:50%;bottom:112px;transform:translateX(-50%);z-index:3;width:max-content;max-width:calc(100% - 48px);padding:0;min-height:35px;text-align:center}
+@media(min-width:1600px){
+ .is-enhanced .moto-story-topline,.is-enhanced .moto-story-console{left:max(7%,calc((100vw - 1440px)/2));right:max(7%,calc((100vw - 1440px)/2))}
+ .is-enhanced .moto-story-scene{left:max(7%,calc((100vw - 1440px)/2));max-width:590px}
+}
+@media(max-width:1100px){
+ .is-enhanced .moto-story-topline{top:108px}
+ .moto-story-console nav{gap:18px}
+ .moto-story-console nav button{font-size:12px}
+ .moto-story-scene h2,.moto-story-scene h3{font-size:clamp(44px,5.3vw,64px)}
+ .moto-story-text{font-size:17px}
+ .is-enhanced .moto-story-scene{width:46%;top:170px;bottom:auto}
+}
+@media(max-width:767px){
+ .motorcycle-story{scroll-margin-top:-75px}
+ .motorcycle-story.is-enhanced{height:235svh}
+ .moto-story-backdrop{aspect-ratio:9/16;max-height:90svh}
+ .motorcycle-story:not(.is-enhanced) .moto-story-backdrop{aspect-ratio:5/4}
+ .motorcycle-story:not(.is-enhanced) .moto-story-identity-image img{position:absolute;right:0;width:auto;max-width:none;height:100%}
+ .moto-story-picture img{object-position:center}
+ .moto-story-topline{padding:36px 24px 0}
+ .moto-story-topline>p{font-size:10px;letter-spacing:.1em;gap:10px}
+ .moto-story-topline>span{display:none}
+ .moto-story-scene{padding:36px 24px;max-width:none}
+ .moto-story-scene h2,.moto-story-scene h3{font-size:clamp(36px,10.5vw,48px);line-height:1.07}
+ .moto-story-text{font-size:16px;line-height:1.65;max-width:none;margin-top:18px}
+ .moto-story-kicker{font-size:11px;margin-bottom:16px;gap:9px}
+ .moto-story-tags{margin-top:18px;gap:7px 16px}
+ .moto-story-tags li{font-size:12px}
+ .moto-story-note{font-size:12px;line-height:1.65;margin-top:12px}
+ .is-enhanced .moto-story-history-image{display:none}
+ .is-enhanced[data-view="history"] .moto-story-picture{opacity:1}
+ .is-enhanced[data-view="identity"] .moto-story-picture{opacity:0}
+ .is-enhanced[data-view="identity"] .moto-story-backdrop{max-height:none}
+ .is-enhanced .moto-story-identity-image{inset:auto 16px 120px;height:calc((100vw - 32px)*.9)}
+ .is-enhanced .moto-story-identity-image img{position:absolute;right:0;top:0;width:auto;max-width:none;height:100%;object-fit:contain;object-position:right center}
+ .is-enhanced[data-view="identity"] .moto-story-shade{background:linear-gradient(180deg,#071a1377,transparent 35%,transparent 83%,#071a13bb)}
+ .is-enhanced .moto-story-picture img,.is-enhanced[data-view="care"] .moto-story-picture img,.is-enhanced[data-view="fuel"] .moto-story-picture img{transform:none;object-fit:contain;object-position:center bottom}
+ .is-enhanced .moto-story-shade{background:linear-gradient(180deg,#071a1399 0%,#071a1366 35%,transparent 60%,#071a1377 85%,#071a13e6)}
+ .is-enhanced .moto-story-topline{left:24px;right:24px;top:94px}
+ .is-enhanced .moto-story-scene{left:24px;right:24px;top:142px;bottom:auto;width:auto;max-width:none}
+ .is-enhanced .moto-story-console{left:24px;right:24px;bottom:18px;padding-top:10px;gap:0}
+ .moto-story-count,.moto-story-arrows{display:none}
+ .moto-story-console nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+ .moto-story-console nav button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;font-size:11px;min-height:48px;white-space:nowrap}
+ .moto-story-console nav button>span{font-size:10px}
+ .moto-story-console nav button[aria-current]:before{top:-11px}
+ .is-enhanced .moto-story-next{bottom:96px;font-size:12px;gap:9px;max-width:calc(100% - 40px)}
+}
+@media(max-width:380px){
+ .is-enhanced .moto-story-topline{top:91px;left:20px;right:20px}
+ .is-enhanced .moto-story-scene{top:130px;left:20px;right:20px}
+ .moto-story-scene h2,.moto-story-scene h3{font-size:36px}
+ .moto-story-kicker{margin-bottom:12px}
+ .moto-story-text{font-size:15px;line-height:1.6;margin-top:15px}
+ .moto-story-tags{margin-top:14px;gap:6px 12px}
+ .moto-story-tags li{font-size:11px}
+ .is-enhanced .moto-story-console{left:20px;right:20px}
+ .moto-story-console nav button{font-size:10px}
+ .is-enhanced[data-view="identity"] .moto-story-tags{display:none}
+}
+@media(max-height:680px) and (min-width:768px){
+ .is-enhanced .moto-story-topline{top:100px}
+ .is-enhanced .moto-story-scene{top:151px;bottom:auto;width:45%}
+ .moto-story-scene h2,.moto-story-scene h3{font-size:clamp(40px,4.3vw,61px)}
+ .moto-story-kicker{margin-bottom:14px}
+ .moto-story-text{font-size:16px;line-height:1.6;margin-top:16px}
+ .moto-story-tags{margin-top:17px}
+ .is-enhanced .moto-story-next{bottom:98px}
+ .is-enhanced .moto-story-console{bottom:22px}
+}
+@media(prefers-reduced-motion:reduce){
+ .motorcycle-story.is-enhanced{height:auto}
+ .moto-story-picture img,.moto-story-history-image{transform:none!important;transition:none!important}
+}
+@media(min-width:768px){
+ .is-enhanced[data-view="fuel"] .moto-story-scene h3{font-size:clamp(40px,4.3vw,64px)}
+ .is-enhanced[data-view="fuel"] .moto-story-tags{margin-top:18px}
+ .is-enhanced[data-view="fuel"] .moto-story-note{margin-top:12px}
+ .is-enhanced:has(.moto-story-scene[data-active="true"] .moto-story-note[open]) .moto-story-next{visibility:hidden}
+}
