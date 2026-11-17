@@ -2,7 +2,11 @@
 
 import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowDown,ArrowUpRight,Bike,Check,ChevronLeft,ChevronRight,Fuel,Gauge,Wrench} from 'lucide-react';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {moduleGroups,type EditorialContent} from '@/lib/aventra-content';
+
+const frames=Array.from({length:8},(_,index)=>index+1);
 
 export function MotorcycleStory({content,blocked}:{content:EditorialContent;blocked:boolean}){
  const root=useRef<HTMLElement>(null),stage=useRef<HTMLDivElement>(null);
@@ -23,19 +27,40 @@ export function MotorcycleStory({content,blocked}:{content:EditorialContent;bloc
 
  useEffect(()=>{
   if(!enhanced||blocked)return;
-  let frame=0;
-  const update=()=>{
-   cancelAnimationFrame(frame);
-   frame=requestAnimationFrame(()=>{
-    const element=root.current,scene=stage.current;if(!element||!scene)return;
-    const distance=element.offsetHeight-scene.offsetHeight;
-    const progress=Math.max(0,Math.min(1,-element.getBoundingClientRect().top/Math.max(1,distance)));
-    element.style.setProperty('--moto-progress',String(progress));
-    setActive(Math.min(chapters.length-1,Math.floor(progress*chapters.length)));
+  gsap.registerPlugin(ScrollTrigger);
+  const element=root.current,scene=stage.current;
+  if(!element||!scene)return;
+  const context=gsap.context(()=>{
+   const images=gsap.utils.toArray<HTMLElement>('.moto-cinema-frame',element);
+   gsap.set(images,{autoAlpha:0,scale:1.035});
+   gsap.set(images[0],{autoAlpha:1});
+   // Eight shots, two per chapter. CSS sticky owns layout; ScrollTrigger owns playback.
+   const timeline=gsap.timeline({
+    defaults:{ease:'none'},
+    scrollTrigger:{id:'moto-cinema',trigger:element,start:'top top',
+     end:()=>`+=${element.offsetHeight-scene.offsetHeight}`,scrub:0.45,invalidateOnRefresh:true},
+    onUpdate(){setActive(Math.min(chapters.length-1,Math.floor(this.progress()*chapters.length)));},
    });
-  };
-  update();window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);
-  return()=>{cancelAnimationFrame(frame);window.removeEventListener('scroll',update);window.removeEventListener('resize',update);};
+   images.forEach((image,index)=>{
+    const start=index;
+    if(index>0){
+     timeline.to(image,{autoAlpha:1,duration:.35},start-.18);
+     timeline.to(images[index-1],{autoAlpha:0,duration:.35},start-.18);
+    }
+    timeline.to(image,{scale:1,duration:1.15},start);
+   });
+   // Keep the final road shot visible before leaving the section.
+   timeline.to({hold:0},{hold:1,duration:.15},7.85);
+  },element);
+  // Earlier chapters can change document height after hydration or font loading.
+  // Refresh only on layout changes, never on each scroll frame.
+  let refreshFrame=0;
+  const observer=new ResizeObserver(()=>{
+   cancelAnimationFrame(refreshFrame);
+   refreshFrame=requestAnimationFrame(()=>ScrollTrigger.refresh());
+  });
+  observer.observe(document.body);
+  return()=>{observer.disconnect();cancelAnimationFrame(refreshFrame);context.revert();};
  },[enhanced,blocked,chapters.length]);
 
  const select=useCallback((index:number)=>{
@@ -48,13 +73,11 @@ export function MotorcycleStory({content,blocked}:{content:EditorialContent;bloc
 
  return <section id="moto" ref={root} className={`motorcycle-story${enhanced?' is-enhanced':''}`} data-view={chapters[active].view} aria-label="Tu moto y su historia">
   <div className="moto-story-stage" ref={stage}>
-   <div className="moto-story-backdrop" role="img" aria-label={!enhanced||active===0?'Perfil conceptual 3D de una moto en Aventra: nombre ilustrativo Mi compañera, tema del perfil y tarjeta de propiedad. No es una captura de la app.':'Escena conceptual 3D de una moto urbana verde y marfil en un patio colombiano'}>
-    <picture className="moto-story-picture">
-     <source media="(max-width:767px)" srcSet="/illustrations/moto-historia-movil-3d-v1.webp"/>
-     <img src="/illustrations/moto-historia-3d-v1.webp" width="1672" height="941" alt="" loading="lazy" decoding="async"/>
-    </picture>
-    <img className="moto-story-history-image" src="/illustrations/cuidados-3d-v1.webp" width="1448" height="1086" alt="" loading="lazy" decoding="async"/>
-    <div className="moto-story-identity-image"><img src="/illustrations/moto-identidad-digital-3d-v2.webp" width="1672" height="941" alt="" loading="lazy" decoding="async"/></div>
+   <div className="moto-story-backdrop" role="img" aria-label="Secuencia cinematográfica de una moto dual-sport al atardecer: retrato, faro, odómetro, motor, transmisión y carretera.">
+    {frames.map(frame=><picture className="moto-cinema-frame" key={frame}>
+     <source media="(max-width:767px)" srcSet={`/illustrations/moto-cinema-v2/frame-${frame}-mobile.webp`}/>
+     <img src={`/illustrations/moto-cinema-v2/frame-${frame}-4k.webp`} srcSet={`/illustrations/moto-cinema-v2/frame-${frame}-1920.webp 1920w, /illustrations/moto-cinema-v2/frame-${frame}-4k.webp 3840w`} sizes="72vw" width="3840" height="2160" alt="" loading="lazy" decoding="async"/>
+    </picture>)}
    </div>
    <div className="moto-story-shade" aria-hidden="true"/>
    <div className="moto-story-topline"><p><span>03</span><i/>TU MOTO Y SU HISTORIA</p><span>EL CAMINO CAMBIA.<br/>SU HISTORIA SIGUE CONTIGO.</span></div>

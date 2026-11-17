@@ -4,6 +4,17 @@ Experiencia inmersiva de Aventra: Rodadas, identidad de la moto, cuidados,
 comunidad y descarga preliminar para Android. Incluye ilustraciones de Aventra,
 modo nocturno, navegación por capítulos y movimiento reducido.
 
+La sección «03 — Tu moto y su historia» presenta ocho planos generados
+individualmente sin referencias textuales a fabricantes. GSAP ScrollTrigger
+controla los fundidos y el acercamiento al desplazarse, conservando los cuatro
+capítulos y sus textos. Con movimiento reducido o menos de 700 píxeles de alto,
+se mantiene la lectura vertical sin escenario fijo.
+
+Los WebP de `public/illustrations/moto-cinema-v2/` incluyen versiones móviles,
+1920 × 1080 y 3840 × 2160. Las versiones 4K son ampliaciones de originales
+generados a 1672 × 941, no generación 4K nativa. Los prompts y la procedencia
+están en `docs/moto-cinema-v2.json`.
+
 ## Desarrollo
 
 Requiere Node.js 22.13 o posterior.

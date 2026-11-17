@@ -1,5 +1,12 @@
 # Third-party notices
 
+## GSAP and ScrollTrigger
+
+Copyright 2008-2026, GreenSock. All rights reserved.
+Subject to the GSAP Standard License: https://gsap.com/standard-license
+The package version is recorded in `package-lock.json`. Original license
+headers remain in the distributed JavaScript bundles.
+
 ## Local preview authentication helper
 
 `scripts/preview-auth.ts` contains modified portions of a MIT-licensed helper.
