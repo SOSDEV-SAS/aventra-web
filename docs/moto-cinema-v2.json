@@ -1,0 +1,56 @@
+{
+  "tool": "built-in image_gen",
+  "status": "Generated with built-in image_gen, visually reviewed and approved for integration and publication by the user.",
+  "resolution": "Native 1672x941; 3840x2160 exports are resampled, not native 4K.",
+  "reference": "User-provided Vertical Frame Strip: Aventura Dual-Sport al Atardecer.png",
+  "items": [
+    {
+      "frame": 1,
+      "source": "exec-54d14e41-0e4b-4318-83e3-3c30c28d51ae.png",
+      "prompt": "Regenerate ONLY SHOT 1 (top panel) of this reference strip as ONE standalone photorealistic cinematic image, NOT a collage. Deliver true 4K landscape 3840x2160 pixels. A generic unbranded dark forest-green and ivory dual-sport motorcycle parked on a Colombian mountain overlook at sunset, three-quarter front view, black helmet on rock to left, warm sunset to right. Rebuild photographic fine detail from scratch, no pixelated enlargement. Preserve motorcycle design, mood and mountain setting of reference. Full motorcycle including both wheels with breathing space; subject centered slightly right for website text overlay. Realistic rubber, spokes, metal, paint, coherent mechanical anatomy, cinematic natural lighting. REMOVE ALL manufacturer names, brand names, logos, emblems, decals, model identifiers and invented lettering from tank, fairings, motor, tires, helmet and all other surfaces. Blank clean panels, no watermark, no typography. Single 16:9 4K frame.",
+      "correction": null
+    },
+    {
+      "frame": 2,
+      "source": "exec-019bec45-7754-4ee9-beeb-02dc3ee0bcfd.png",
+      "prompt": "Use case: photorealistic-natural. Generate a NEW standalone shot for a coherent film sequence using attached image as motorcycle identity, materials, color and sunset reference. SHOT 2: cinematic close-up of the front headlight, short windscreen, forest-green tank and ivory side fairing of this EXACT same motorcycle. Front three-quarter angle. Entire headlight visible at right center, tank toward left, blurred Colombian mountains at sunset. No whole motorcycle necessary. Extremely crisp lens glass, LED optics, paint and metal. Output ONE landscape image, 16:9, requested resolution 3840x2160 4K. Reconstruct high-detail photographic textures; NOT a collage, NOT an enlargement of a strip. Physically plausible components. Remove ALL brand names, logos, badges, model identifiers, manufacturer lettering and pseudo-lettering, including tiny markings on components, tires, fairings, clothing and handlebar grips. Blank clean unbranded surfaces. No watermark or added captions. Match reference motorcycle and natural cinematic lighting.",
+      "correction": null
+    },
+    {
+      "frame": 3,
+      "source": "exec-7723a240-3c9c-4a10-a899-647cc986e321.png",
+      "prompt": "Use case: photorealistic-natural. Generate a NEW standalone shot for a coherent film sequence using attached image as motorcycle identity, materials, color and sunset reference. SHOT 3: rider perspective close-up of the digital dashboard and handlebars of this same generic motorcycle, parked at the same mountain overlook. Dashboard centered and fully visible, black angular housing, restrained green accents, realistic screen reading only '0', 'km/h', 'N', 'ODO', '12,480 km', '06:24'. No manufacturer name or Aventra word on screen. Background softly blurred mountains at sunset. Sharp legible instrumentation and natural reflections. Output ONE landscape image, 16:9, requested resolution 3840x2160 4K. Reconstruct high-detail photographic textures; NOT a collage, NOT an enlargement of a strip. Physically plausible components. Remove ALL brand names, logos, badges, model identifiers, manufacturer lettering and pseudo-lettering, including tiny markings on components, tires, fairings, clothing and handlebar grips. Blank clean unbranded surfaces. No watermark or added captions. Match reference motorcycle and natural cinematic lighting.",
+      "correction": null
+    },
+    {
+      "frame": 4,
+      "source": "exec-c3d7df52-ad6b-4421-982b-6442ec1d865b.png",
+      "prompt": "Use case: photorealistic-natural. Generate a NEW standalone shot for a coherent film sequence using attached image as motorcycle identity, materials, color and sunset reference. SHOT 4: extreme cinematic macro of the odometer screen of this same motorcycle. Only functional text 'ODO' and '12,480 km' in crisp white digital type on dark glass, fine thin green interface accents. Screen fills frame with subtle oblique perspective, digits fully visible in central safe area, natural reflections, sharp glass and pixels, same sunset light. Output ONE landscape image, 16:9, requested resolution 3840x2160 4K. Reconstruct high-detail photographic textures; NOT a collage, NOT an enlargement of a strip. Physically plausible components. Remove ALL brand names, logos, badges, model identifiers, manufacturer lettering and pseudo-lettering, including tiny markings on components, tires, fairings, clothing and handlebar grips. Blank clean unbranded surfaces. No watermark or added captions. Match reference motorcycle and natural cinematic lighting.",
+      "correction": null
+    },
+    {
+      "frame": 5,
+      "source": "exec-9769da37-b0bc-4427-bb8e-d075e34bd1cf.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE new standalone cinematic photograph, 16:9 landscape requested 3840x2160 4K, never a collage. Reference image defines motorcycle identity, green/ivory color, materials, mountain setting and sunset light. SHOT 5: tight cinematic mechanical detail of the SAME motorcycle engine, dark metallic crankcase with smooth blank circular cover, cooling fins, bolts, frame and bronze exhaust pipe, sliver of forest-green and ivory bodywork above. Coherent single-cylinder dual-sport engine anatomy. No displacement numbers or lettering on the engine cover. Warm grazing sunset light reveals crisp metal textures; soft mountain setting behind. Rebuild photographic fine detail from scratch, not a pixelated enlargement. No manufacturer names, brand logos, badges, model identifiers, pseudo-text or invented lettering on ANY component or surface including tires, motor, clothing, helmet and backpack. No watermarks or captions. Maintain coherent natural photographic realism.",
+      "correction": null
+    },
+    {
+      "frame": 6,
+      "source": "exec-b577c51a-8d38-4cfa-a24c-1dc8182376ed.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE new standalone cinematic photograph, 16:9 landscape requested 3840x2160 4K, never a collage. Reference image defines motorcycle identity, green/ivory color, materials, mountain setting and sunset light. SHOT 6: cinematic close-up of the SAME motorcycle's rear drive chain, sprocket, matte black swingarm and rear spoked wheel, seen from left side. Realistic connected chain meshing with teeth, physically coherent hub and axle. Crisp individual links, modest dust and wear, no grease excess. Background Colombian mountain overlook at same golden sunset. No readable marks anywhere. Rebuild photographic fine detail from scratch, not a pixelated enlargement. No manufacturer names, brand logos, badges, model identifiers, pseudo-text or invented lettering on ANY component or surface including tires, motor, clothing, helmet and backpack. No watermarks or captions. Maintain coherent natural photographic realism.",
+      "correction": "Precise image edit. Remove ALL embossed letters, numerals, inscriptions and brand-like shapes from the entire tire sidewall, especially the upper arc and lower right edge. Replace with natural plain rubber, preserving tread, wear and lighting. Keep composition, same motorcycle, rider anatomy, scenery, sunset, exposure, realism and fine detail unchanged. No text, logos, symbols, badges or watermark anywhere. Output standalone landscape 16:9 requested 3840x2160."
+    },
+    {
+      "frame": 7,
+      "source": "exec-120b4bff-3e06-4ea3-9771-b0870e5d6591.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE new standalone cinematic photograph, 16:9 landscape requested 3840x2160 4K, never a collage. Reference image defines motorcycle identity, green/ivory color, materials, mountain setting and sunset light. SHOT 7: dynamic low rear three-quarter tracking shot of rear tire of the SAME forest-green ivory motorcycle moving away on a Colombian mountain road. Rear tire and swingarm in crisp focus, slight road motion blur, a few tiny loose pebbles at asphalt edge, warm sunset highlights. Rider's boot correctly on footpeg at top of frame, all-black protective clothing without logos. Keep motorcycle mechanically coherent, rear tire connected to axle, natural traction, road visible winding ahead. No lettering or license plate text. Rebuild photographic fine detail from scratch, not a pixelated enlargement. No manufacturer names, brand logos, badges, model identifiers, pseudo-text or invented lettering on ANY component or surface including tires, motor, clothing, helmet and backpack. No watermarks or captions. Maintain coherent natural photographic realism.",
+      "correction": "Precise image edit. Remove ALL embossed letters and numbers from the tire sidewall, especially lower edge. Remove all small logos or lettering on boots, jacket and motorcycle. Plain unmarked rubber sidewalls and unbranded gear. Keep composition, same motorcycle, rider anatomy, scenery, sunset, exposure, realism and fine detail unchanged. No text, logos, symbols, badges or watermark anywhere. Output standalone landscape 16:9 requested 3840x2160."
+    },
+    {
+      "frame": 8,
+      "source": "exec-7262c362-0d92-46b4-bf22-8dfcf6d313ca.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE new standalone cinematic photograph, 16:9 landscape requested 3840x2160 4K, never a collage. Reference image defines motorcycle identity, green/ivory color, materials, mountain setting and sunset light. SHOT 8: wide cinematic rear three-quarter tracking view of the SAME forest-green ivory dual-sport motorcycle ridden by one adult in a black full-face helmet, black motorcycle jacket, gloves, boots and charcoal backpack on a sweeping Colombian mountain asphalt road at golden sunset. Rider seated naturally, both hands on handlebars, both feet on pegs, staying within their lane. Motorcycle and rider around central safe region; mountains and sunset to right, road curving left ahead. Crisp rider and motorcycle, subtle road motion blur, lush green mountains. All gear and motorcycle unbranded, no decals, no visible plate characters. Rebuild photographic fine detail from scratch, not a pixelated enlargement. No manufacturer names, brand logos, badges, model identifiers, pseudo-text or invented lettering on ANY component or surface including tires, motor, clothing, helmet and backpack. No watermarks or captions. Maintain coherent natural photographic realism.",
+      "correction": "Precise image edit. Remove all helmet badges, small oval emblem by helmet jaw, jacket shoulder patch/emblem, backpack labels, tire sidewall letters and numbers. Plain unbranded surfaces and smooth plain rubber sidewalls. Keep composition, same motorcycle, rider anatomy, scenery, sunset, exposure, realism and fine detail unchanged. No text, logos, symbols, badges or watermark anywhere. Output standalone landscape 16:9 requested 3840x2160."
+    }
+  ]
+}
