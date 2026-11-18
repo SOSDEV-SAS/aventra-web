@@ -19,7 +19,7 @@ export function MotorcycleStory({content,blocked}:{content:EditorialContent;bloc
  ],[content.motoTitle,content.motoIntro]);
 
  useEffect(()=>{
-  const motion=matchMedia('(prefers-reduced-motion:reduce), (max-height:699px)');
+  const motion=matchMedia('(prefers-reduced-motion:reduce), (max-height:499px), (min-width:768px) and (max-height:699px)');
   const update=()=>setEnhanced(!motion.matches);update();
   motion.addEventListener('change',update);
   return()=>motion.removeEventListener('change',update);
