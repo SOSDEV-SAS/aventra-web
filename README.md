@@ -32,8 +32,8 @@ npm run build
 ```
 
 Las escenas iniciales usan los cinco videos del recorrido en `public/videos`,
-con versiones m?viles verticales en `public/videos/mobile` (H.264, 30 fps).
-El texto m?vil se ubica arriba y la entrada de Rodadas queda junto a su imagen. El editor permite ordenar u ocultar escenas y, en una
+con versiones móviles verticales en `public/videos/mobile` (H.264, 30 fps).
+El texto móvil se ubica arriba y la entrada de Rodadas queda junto a su imagen. El editor permite ordenar u ocultar escenas y, en una
 sesión de edición, añadir videos propios MP4, WebM o MOV (hasta 90 MB).
 Solo subas material autorizado y evita datos personales de terceros.
 

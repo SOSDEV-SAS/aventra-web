@@ -12,10 +12,10 @@ export type RideConfig = {
 };
 const aventraCatalog = Object.freeze([
  ['camino','El comienzo','banner','Toda buena historia empieza con un viaje.'],
- ['identidad','La ciudad','ciudad','Sin prisa. Solo t? y el camino.'],
- ['cuidados','La carretera','carretera','La rutina queda atr?s. El camino contin?a.'],
- ['compartir','El pueblo','pueblo','Cada parada tambi?n cuenta una historia.'],
- ['historia','El encuentro','encuentro','El camino tambi?n se comparte.'],
+ ['identidad','La ciudad','ciudad','Sin prisa. Solo tú y el camino.'],
+ ['cuidados','La carretera','carretera','La rutina queda atrás. El camino continúa.'],
+ ['compartir','El pueblo','pueblo','Cada parada también cuenta una historia.'],
+ ['historia','El encuentro','encuentro','El camino también se comparte.'],
 ].map(([id,name,file,caption])=>Object.freeze({id,name,day:`/videos/${file}.mp4`,night:'',caption,enabled:true,builtIn:true,mediaType:'video' as const})));
 const aventraDefaults = Object.freeze({
   title: 'Cada kilómetro cuenta una historia.',
