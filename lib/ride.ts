@@ -11,12 +11,12 @@ export type RideConfig = {
   content: EditorialContent;
 };
 const aventraCatalog = Object.freeze([
- ['camino','El comienzo','camino-3d-v1','Tu moto. Tu historia. Tu camino.'],
- ['identidad','Tu compañera','moto-identidad-digital-3d-v2','Una moto. Una identidad.'],
- ['cuidados','Cuidar para seguir','cuidados-3d-v1','La tranquilidad también se prepara.'],
- ['compartir','En compañía','rodadas-3d-v1','El camino también se comparte.'],
- ['historia','Lo que viene','moto-historia-3d-v1','Cada kilómetro deja su historia.'],
-].map(([id,name,file,caption])=>Object.freeze({id,name,day:`/illustrations/${file}.webp`,night:'',caption,enabled:true,builtIn:true,mediaType:'image' as const})));
+ ['camino','El comienzo','banner','Toda buena historia empieza con un viaje.'],
+ ['identidad','La ciudad','ciudad','Sin prisa. Solo t? y el camino.'],
+ ['cuidados','La carretera','carretera','La rutina queda atr?s. El camino contin?a.'],
+ ['compartir','El pueblo','pueblo','Cada parada tambi?n cuenta una historia.'],
+ ['historia','El encuentro','encuentro','El camino tambi?n se comparte.'],
+].map(([id,name,file,caption])=>Object.freeze({id,name,day:`/videos/${file}.mp4`,night:'',caption,enabled:true,builtIn:true,mediaType:'video' as const})));
 const aventraDefaults = Object.freeze({
   title: 'Cada kilómetro cuenta una historia.',
   subtitle: 'Que lo único pendiente sea el próximo destino.',
@@ -65,9 +65,9 @@ export function normalizeConfig(input: unknown): RideConfig {
     ids.add(s.id);
     const brand = aventraCatalog.find(o => o.id === s.id);
     const validVideo = (url: unknown, optional: boolean) => typeof url === 'string' && ((optional && url === '') || /^\/api\/media\/[a-f0-9-]{36}\.(mp4|webm|mov)$/.test(url));
-    if (brand ? (s.day !== brand.day || s.night !== '' || s.builtIn !== true || s.mediaType !== 'image') : (!validVideo(s.day, false) || !validVideo(s.night, true) || s.builtIn !== false || s.mediaType !== 'video')) throw new Error('El recurso de la escena no es válido.');
+    if (brand ? (s.day !== brand.day || s.night !== '' || s.builtIn !== true || s.mediaType !== brand.mediaType) : (!validVideo(s.day, false) || !validVideo(s.night, true) || s.builtIn !== false || s.mediaType !== 'video')) throw new Error('El recurso de la escena no es válido.');
     if (typeof s.name !== 'string' || !s.name.trim() || s.name.length > 80 || typeof s.caption !== 'string' || s.caption.length > 300 || typeof s.enabled !== 'boolean') throw new Error('Revisa el nombre y el texto de la escena.');
-    return {id:s.id, name:s.name, caption:s.caption, day:s.day as string, night:s.night as string, enabled:s.enabled, builtIn:!!brand,mediaType:brand?'image' as const:'video' as const};
+    return {id:s.id, name:s.name, caption:s.caption, day:s.day as string, night:s.night as string, enabled:s.enabled, builtIn:!!brand,mediaType:'video' as const};
   });
   if (aventraCatalog.some(o => !ids.has(o.id))) throw new Error('Conserva las escenas de Aventra en la biblioteca; puedes ocultarlas.');
   if (!scenes.some(s => s.enabled)) throw new Error('Activa al menos una escena.');
@@ -79,5 +79,5 @@ export function validateConfig(input: unknown): RideConfig {
 }
 
 export function mobileSource(source: string, small: boolean) {
-  return small && source==='/illustrations/moto-historia-3d-v1.webp' ? '/illustrations/moto-historia-movil-3d-v1.webp' : source;
+  return small && /^\/videos\/(banner|ciudad|carretera|pueblo|encuentro)\.mp4$/.test(source) ? source.replace('/videos/', '/videos/mobile/') : source;
 }
