@@ -250,3 +250,18 @@
 @media(prefers-reduced-motion:reduce){
  .hero-discover{top:calc(100svh - 180px);bottom:auto;opacity:1}
 }
+
+/* Keep the mobile introduction above the rider and close Rodadas beside its image. */
+.journey-handoff{align-items:flex-end;padding-bottom:36px}
+@media(max-width:767px){
+ .hero-copy{top:calc(92px + env(safe-area-inset-top));bottom:auto;left:20px;right:20px}
+ .hero-copy>.eyebrow{margin-bottom:18px}
+ .hero-copy h1{font-size:clamp(40px,11.8vw,70px);line-height:1.04}
+ .hero-bottom-copy{margin-top:18px}
+ .hero-bottom-copy>p{max-width:290px;font-size:14px;line-height:1.6}
+ .hero-shade{background:linear-gradient(180deg,#0009, #0005 36%,transparent 65%,#0009)}
+ .journey-handoff{padding-bottom:28px}
+}
+@media(max-width:767px) and (prefers-reduced-motion:reduce){
+ .hero-copy{top:auto;left:auto;right:auto;justify-content:flex-start;padding:100px 20px 180px}
+}
