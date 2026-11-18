@@ -259,6 +259,11 @@
  .hero-copy h1{font-size:clamp(40px,11.8vw,70px);line-height:1.04}
  .hero-bottom-copy{margin-top:18px}
  .hero-bottom-copy>p{max-width:290px;font-size:14px;line-height:1.6}
+ .hero-copy{text-align:center}
+ .hero-copy>.eyebrow{justify-content:center}
+ .hero-copy h1,.hero-copy .scene-heading{margin-inline:auto}
+ .hero-bottom-copy{justify-content:center}
+ .hero-bottom-copy>p{margin-inline:auto}
  .hero-shade{background:linear-gradient(180deg,#0009, #0005 36%,transparent 65%,#0009)}
  .journey-handoff{padding-bottom:28px}
 }

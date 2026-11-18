@@ -2134,7 +2134,7 @@ to{
 .rodadas-section{padding-top:0}
 .rodadas-section .wide-illustration{margin-top:0}
 @media(max-width:767px){
- .immersive-intro{--scene-distance:calc(var(--scene-count)*20svh);--handoff-distance:65svh}
+ .immersive-intro{--scene-distance:calc(var(--scene-count)*100svh);--handoff-distance:65svh}
  .hero-stage{min-height:0}
  .journey-handoff{padding:95px 25px 40px}
  .journey-handoff .section-top{margin-bottom:35px}
